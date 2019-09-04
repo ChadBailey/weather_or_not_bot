@@ -56,6 +56,7 @@ class Weather:
     def alerts_text(self):
         if 'features' in self.active_alerts.keys() \
         and len(self.active_alerts.get('features')) > 0:
+            return self.active_alerts
             alerts = []
             for feature in self.active_alerts['features']:
                 alert_id = feature['properties']['id']
