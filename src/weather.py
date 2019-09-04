@@ -57,7 +57,6 @@ class Weather:
         return f'{self.root_url}/alerts/active/zone/{self.weather_zone}'
         if 'features' in self.active_alerts.keys() \
         and len(self.active_alerts.get('features')) > 0:
-            return self.active_alerts
             alerts = []
             for feature in self.active_alerts['features']:
                 alert_id = feature['properties']['id']
@@ -77,8 +76,7 @@ __Message__:
 {description}
 """
                 alerts.append(msg)
-            #return '\n\n'.join(alerts)
-            return self.active_alerts
+            return '\n\n'.join(alerts)
         return "No active alerts"
 
     def weekly_forecast(self):
