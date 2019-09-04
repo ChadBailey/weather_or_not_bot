@@ -76,7 +76,7 @@ __Message__:
 """
                 alerts.append(msg)
             #return '\n\n'.join(alerts)
-            return alerts[0]
+            return self.active_alerts
         return "No active alerts"
 
     def weekly_forecast(self):
