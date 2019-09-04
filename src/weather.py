@@ -54,7 +54,6 @@ class Weather:
         return r.json()
 
     def alerts_text(self):
-        return f'{self.root_url}/alerts/active/zone/{self.weather_zone}'
         if 'features' in self.active_alerts.keys() \
         and len(self.active_alerts.get('features')) > 0:
             alerts = []
